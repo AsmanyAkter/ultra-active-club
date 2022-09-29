@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { addToDb, getStoredCart } from '../../utilities/fakedb'
 import Activity from '../Activities/Activity';
 import Exercise from '../Exercises/Exercise';
+import Blogs from '../Blogs/Blogs';
 import logo from '../Gym/logo.png'
 import './Gym.css'
 
@@ -52,36 +53,46 @@ const Gym = () => {
 
 
     return (
-        <div className='gym-container'>
-            <div >
-                <nav className='header'>
-                    <div>
-                        <img src={logo} alt="" srcset="" height={100} width={100} />
-                    </div>
-                    <div>
-                        YooGa
-                    </div>
-                </nav>
 
-                <div className='exercise-container'>
-                    {/* <h1>Exercise Length: {exercises.length}</h1> */}
-                    {
-                        exercises.map(exercise =>
-                            <Exercise
-                                key={exercise.id}
-                                exercise={exercise}
-                                handleExerciseCalculation={handleExerciseCalculation}
-                            ></Exercise>)
-                    }
+        <div className='gym-main' >
 
+
+            <div className='gym-container'>
+                <div >
+                    <nav className='header'>
+                        <div>
+                            <img src={logo} alt="" srcset="" height={100} width={100} />
+                        </div>
+                        <div>
+                            YooGa
+                        </div>
+                    </nav>
+
+                    <div className='exercise-container'>
+                        {/* <h1>Exercise Length: {exercises.length}</h1> */}
+                        {
+                            exercises.map(exercise =>
+                                <Exercise
+                                    key={exercise.id}
+                                    exercise={exercise}
+                                    handleExerciseCalculation={handleExerciseCalculation}
+                                ></Exercise>)
+                        }
+
+                    </div>
+
+                </div>
+                <div className='activity-container '>
+
+                    <Activity summary={summary} >
+
+                    </Activity>
                 </div>
 
             </div>
-            <div className='activity-container '>
 
-                <Activity summary={summary} >
-
-                </Activity>
+            <div>
+                <Blogs></Blogs>
             </div>
 
 

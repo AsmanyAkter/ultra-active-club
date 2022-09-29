@@ -3,6 +3,11 @@
     grid-template-columns: 3.7fr 1.3fr;
 }
 
+.gym-main {
+    display: grid;
+    grid-template-columns: 5;
+}
+
 .header {
     color: blue;
     text-decoration: none;
@@ -36,6 +41,10 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }
 
 
@@ -44,10 +53,20 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
 }
 
 @media screen and (min-width:1100px) {
     .exercise-container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .blogs {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }

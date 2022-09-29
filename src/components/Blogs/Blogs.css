@@ -1,0 +1,19 @@
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+
+.header-text {
+    color: blue;
+    text-align: center;
+}
+
+.box {
+    border: solid blue 2px;
+    border-radius: 5px;
+    padding: 20px;
+}
