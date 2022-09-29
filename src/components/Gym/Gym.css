@@ -1,6 +1,6 @@
 .gym-container {
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3.7fr 1.3fr;
 }
 
 .header {
@@ -31,8 +31,23 @@
 
 
 
-@media screen and (max-width:1100px) {
-    .products-container {
+@media only screen and (max-width: 600px) {
+    .exercise-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+
+@media screen and (min-width: 600px) {
+    .exercise-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (min-width:1100px) {
+    .exercise-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

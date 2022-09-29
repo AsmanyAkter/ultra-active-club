@@ -9,7 +9,7 @@ const Exercise = (props) => {
             <img src={img} alt="" srcset="" />
             <h3>Exercise Name: {name}</h3>
             <p>Time: {time} min</p>
-            <button>Add to list</button>
+            <button className='exercise-btn'>Add to list</button>
         </div>
     );
 };
