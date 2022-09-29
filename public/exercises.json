@@ -3,36 +3,42 @@
     "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
     "name": "Barbell",
     "img": "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "time": 5
+    "time": 5,
+    "quantity": 0
   },
   {
     "id": "13cbc7ed-a61b-4883-9d42-82d7d8642b86",
     "name": "Plank",
     "img": "https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "time": 5
+    "time": 5,
+    "quantity": 0
   },
   {
     "id": "307f166f-1d04-4573-bc37-2f461ea9d4f7",
     "name": "Dumbbell",
     "img": "https://images.pexels.com/photos/3836885/pexels-photo-3836885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "time": 10
+    "time": 10,
+    "quantity": 0
   },
   {
     "id": "4bf9798f-63bc-4a83-b0c6-6a3b816fe922",
     "name": "Jogging",
     "img": "https://images.pexels.com/photos/3623180/pexels-photo-3623180.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "time": 30
+    "time": 30,
+    "quantity": 0
   },
   {
     "id": "9496d72b-04ec-41f8-9bc3-0a7c9697be8e",
     "name": "Swimming",
     "img": "https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "time": 30
+    "time": 30,
+    "quantity": 0
   },
   {
     "id": "6e5593d3-557b-43cf-8dab-a5140faedfb0",
     "name": "Meditation",
     "img": "https://images.pexels.com/photos/3900844/pexels-photo-3900844.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "time": 30
+    "time": 30,
+    "quantity": 0
   }
 ]

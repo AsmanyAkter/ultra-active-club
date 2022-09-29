@@ -2,7 +2,18 @@ import React from 'react';
 import './Activity.css'
 import person from './person.jpg'
 
-const Activity = () => {
+const Activity = (props) => {
+    const { summary } = props;
+    // console.log(summary)
+
+    let total = 0;
+    let quantity = 0;
+
+    for (const exercise of summary) {
+        quantity = quantity + exercise.quantity;
+        total = total + exercise.time * exercise.quantity;
+    }
+
     return (
         <div className='activity'>
             <div className='person'>
@@ -41,8 +52,8 @@ const Activity = () => {
 
             <div className='activity-details'>
                 <h1>Activity Details</h1>
-                <p>Exercise time: 0 Seconds</p>
-                <p>Break Time: 0 Seconds</p>
+                <p>Exercise time: {total} Min</p>
+                <p>Break Time: 0 Min</p>
             </div>
 
             <div className='activity-completed'>
