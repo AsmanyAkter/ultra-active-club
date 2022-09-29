@@ -3,16 +3,33 @@
     grid-template-columns: 4fr 1fr;
 }
 
+.header {
+    color: blue;
+    text-decoration: none;
+    font-size: 56px;
+    display: flex;
+    margin: 80px;
+    padding: 20;
+    gap: 40px;
+    text-align: center;
+    align-items: center;
+}
+
 .exercise-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 45px;
-    margin: 100px 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+
 }
 
 .activity-container {
-    background-color: rgba(255, 153, 0, 0.3);
+
+    background-color: #ADD8E6;
 }
+
+
 
 @media screen and (max-width:1100px) {
     .products-container {
