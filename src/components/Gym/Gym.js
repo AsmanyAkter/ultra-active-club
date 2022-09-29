@@ -22,7 +22,7 @@ const Gym = () => {
 
     useEffect(() => {
         const storedCard = getStoredCart();
-        console.log(storedCard);
+        // console.log(storedCard);
         const savedCard = []
 
         for (const id in storedCard) {
@@ -32,7 +32,7 @@ const Gym = () => {
                 addedActivity.quantity = quantity;
                 savedCard.push(addedActivity)
 
-                // console.log(addedActivity)
+                console.log(addedActivity)
             }
 
         }
@@ -40,7 +40,6 @@ const Gym = () => {
 
 
     }, [exercises]);
-
 
 
 

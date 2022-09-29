@@ -1,18 +1,35 @@
-import React from 'react';
+// import React from 'react';
 import './Activity.css'
 import person from './person.jpg'
+import React, { useEffect, useState } from "react";
+
+
 
 const Activity = (props) => {
+
+
+    const [time, setTime] = useState([]);
+
+
     const { summary } = props;
-    // console.log(summary)
 
     let total = 0;
     let quantity = 0;
+    let updatedTime = 0;
 
     for (const exercise of summary) {
         quantity = quantity + exercise.quantity;
         total = total + exercise.time * exercise.quantity;
     }
+
+    function updateLocalStorage(id) {
+        let testObject = { time: id };
+        localStorage.setItem('testObject', JSON.stringify(testObject));
+        let retrievedObject = localStorage.getItem('testObject');
+        updatedTime = JSON.parse(retrievedObject).time;
+        setTime(updatedTime)
+    }
+
 
     return (
         <div className='activity'>
@@ -41,11 +58,11 @@ const Activity = (props) => {
             <div className='add-break'>
                 <h1>Add A Break</h1>
                 <div>
-                    <button className='time-btn'>10 min</button>
-                    <button className='time-btn'>20 min</button>
-                    <button className='time-btn'>30 min</button>
-                    <button className='time-btn'>40 min</button>
-                    <button className='time-btn'>50 min</button>
+                    <button onClick={() => updateLocalStorage(10)} className='time-btn'>10 min</button>
+                    <button onClick={() => updateLocalStorage(20)} className='time-btn'>20 min</button>
+                    <button onClick={() => updateLocalStorage(30)} className='time-btn'>30 min</button>
+                    <button onClick={() => updateLocalStorage(40)} className='time-btn'>40 min</button>
+                    <button onClick={() => updateLocalStorage(50)} className='time-btn'>50 min</button>
                 </div>
             </div>
 
@@ -53,11 +70,12 @@ const Activity = (props) => {
             <div className='activity-details'>
                 <h1>Activity Details</h1>
                 <p>Exercise time: {total} Min</p>
-                <p>Break Time: 0 Min</p>
+                <p>Break Time: {time} Min</p>
             </div>
 
-            <div className='activity-completed'>
-                <button className='activity-completed-btn'>Activity Completed</button>
+            <div id="activity-completed" className='activity-completed'>
+                <button className='activity-completed-btn'> Activity Completed</button>
+
             </div>
 
         </div >
