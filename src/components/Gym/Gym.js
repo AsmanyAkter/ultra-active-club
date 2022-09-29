@@ -9,7 +9,6 @@ import './Gym.css'
 const Gym = () => {
 
     const [exercises, setExercises] = useState([]);
-
     const [summary, setSummary] = useState([]);
 
 
@@ -18,11 +17,10 @@ const Gym = () => {
             .then(res => res.json())
             .then(data => setExercises(data))
 
-    }, []);
+    }, [exercises]);
 
     useEffect(() => {
         const storedCard = getStoredCart();
-        // console.log(storedCard);
         const savedCard = []
 
         for (const id in storedCard) {
@@ -31,8 +29,6 @@ const Gym = () => {
                 const quantity = storedCard[id];
                 addedActivity.quantity = quantity;
                 savedCard.push(addedActivity)
-
-                console.log(addedActivity)
             }
 
         }
@@ -44,7 +40,6 @@ const Gym = () => {
 
 
     const handleExerciseCalculation = (exercise) => {
-        // console.log(exercise);
         const newSummary = [...summary, exercise];
         setSummary(newSummary)
         addToDb(exercise.id)
@@ -68,7 +63,6 @@ const Gym = () => {
                     </nav>
 
                     <div className='exercise-container'>
-                        {/* <h1>Exercise Length: {exercises.length}</h1> */}
                         {
                             exercises.map(exercise =>
                                 <Exercise

@@ -3,6 +3,7 @@ import './Exercise.css'
 
 
 const Exercise = (props) => {
+
     const { name, img, time, id } = props.exercise;
     const { handleExerciseCalculation } = props
 

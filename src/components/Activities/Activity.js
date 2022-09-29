@@ -1,17 +1,16 @@
-// import React from 'react';
 import './Activity.css'
 import person from './person.jpg'
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 
 
 const Activity = (props) => {
 
-
     const [time, setTime] = useState([]);
 
-
     const { summary } = props;
+
+    // console.log(summary);
 
     let total = 0;
     let quantity = 0;
@@ -19,7 +18,9 @@ const Activity = (props) => {
 
     for (const exercise of summary) {
         quantity = quantity + exercise.quantity;
-        total = total + exercise.time * exercise.quantity;
+        total = total + (exercise.time * exercise.quantity);
+        // console.log(total);
+
     }
 
     function updateLocalStorage(id) {
